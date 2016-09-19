@@ -1,0 +1,610 @@
+body {
+	background: url(../images/landscape2.jpg);
+	background-repeat: no-repeat;	
+}
+
+.headerContainer {
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 0 100px 0 100px;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	font-family: Open Sans Condensed;
+}
+
+.appInfo {
+	display: flex;
+	align-items: center;
+}
+
+.appInfo p {
+	font-size: 26px;
+	color: rgba(255, 117, 0, 1.0);
+	font-weight: 700;
+	height: 28px;
+}
+
+.rightSide {
+	display: flex;
+	flex-direction: row;
+}
+
+.apiInfo {
+	display: flex;
+	align-items: center;
+	margin-right: 50px;
+}
+
+.apiInfo p {
+	height: 11px;
+}
+
+.socialButtons {
+	display: flex;
+	align-items: center;
+}
+
+.infoData {
+	background-color: white;
+	font-family: Open Sans Condensed;
+	font-size: 19px;
+	font-weight: 300;
+	display: flex;
+	justify-content: center;
+	padding: 8px 4px 0 4px;
+}
+
+.navIcon {
+	display: flex;
+	align-items: center;
+	margin-left: 45px;
+	transition:color .5s;
+}
+
+.navIcon:hover {
+	cursor: pointer;
+	color: rgba(255, 117, 0, 1.0);
+}
+
+.typeData {
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family: Open Sans Condensed;
+	font-weight: 300;
+	color: #aeaeae;
+}
+
+.typeDataContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+/* style for dynamic input */
+.input-form{
+	position:relative;
+	display: flex;
+	top: 18px;
+	height: 55px;
+	margin-right: 35px;
+}
+
+.input-form:first-child {
+	margin-right: 1px;
+}
+
+input[type=text] {
+	background-color:transparent;
+	border:none;
+	border-bottom:1px solid #ccc;
+	border-radius:0;
+	outline:0;
+	transition:all .2s;
+	outline:0;
+	height:25px;
+	font-size:16px;
+	-webkit-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	box-sizing: content-box;
+	margin-left: 25px;
+}
+
+.input-form label{
+	color: rgba(255, 117, 0, .5);
+	font-weight: 700;
+	position:absolute;
+	left:0;
+	font-size:16px;
+	cursor:text;
+	transition:.2s ease-out;
+	-webkit-transition:.2s ease-out;-moz-transition:.2s ease-out;-o-transition:.2s ease-out;-ms-transition:.2s ease-out;
+	margin-left: 35px;
+}
+
+.labelActive {
+	transform: translateY(-85%);
+	-webkit-transform:translateY(-85%);-moz-transform:translateY(-85%);-ms-transform:translateY(-85%);-o-transform:translateY(-85%);
+}
+
+.input-form .prefix{
+	color: #aeaeae;
+	position:absolute;
+	font-size:2rem;
+	transition: .2s;
+	-webkit-transition: .2s;-moz-transition: .2s;-o-transition: .2s;-ms-transition: .2s;}
+
+.prefixActive{
+	color:rgba(255, 117, 0, .7)!important;
+}
+
+.prefix:hover {
+	cursor: pointer;
+}
+
+.runSearching:hover {
+	font-size:3rem;
+	transform: translateY(-6px) translateX(-6px);	
+}
+
+input:focus {
+	padding-bottom: 1px;
+	border-bottom:2px solid rgba(255, 117, 0, 1.0); 
+}
+
+input[type=text]:focus+label {
+	color: rgba(255, 117, 0, 1.0);
+}
+/* koniec styli dynamicznego inputa */
+
+.containerDatas {
+	margin-top: 60px;
+}
+
+.widgetContainer {
+	font-family: Dosis;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(255, 165, 0, 0.7);
+	height: 438px;
+	width: 582px;
+	margin: 0 auto;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.66);
+	-moz-box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.66);
+	box-shadow: 0px 0px 17px -2px rgba(0,0,0,0.66);
+	margin-top: 0px;
+}
+
+.firstRow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 240px;
+	width: 582px;
+}
+
+.firstRow .el1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 240px;
+	width: 291px;
+	background: url(../images/meadowww.jpg);
+	border-radius: 5px 0 0 0;
+	color: white;
+}
+
+.firstRow .el2 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 240px;
+	width: 291px;
+}
+
+.firstRow .el2 .temp {
+	display: flex;
+	align-items: center;
+	flex-direction:column;
+	height: 144px;
+	width: 71.5%;
+	border-bottom: 1px solid rgba(131, 45, 52, 1.0);
+}
+
+.firstRow .el2 .temp .currentTemp {
+	display: flex;
+	align-items: center;
+	height: 100px;
+	font-weight: 200;
+	font-size: 85px;
+	color: rgba(131, 45, 52, 1.0);
+}
+
+.firstRow .el2 .temp .otherTemp {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	height: 44px;
+	width: 75%;
+	font-weight: 300;
+	font-size: 16px;
+	color: white;
+}
+
+.firstRow .el2 .temp .otherTemp div {
+	display: flex;
+	align-items: center;
+}
+
+.firstRow .el2 .other {
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	flex-direction: column;
+	height: 96px;
+	width: 71.5%;
+	border-bottom: 1px solid rgba(131, 45, 52, 1.0);
+	font-weight: 300;
+	font-size: 18px;
+	color: white;
+}
+
+.firstRow .el2 .other div {
+	display: flex;
+	align-items: center;
+}
+
+.firstRow .el2 .other div div {
+	font-weight: 700;
+}
+
+.firstRow .el2 .other .iconForMobile {
+	display: none;
+}
+
+.secondRow {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 198px;
+	width: 582px;
+}
+
+.secondRow .el1 {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 198px;
+	width: 291px;
+	background: url(../images/meadow2.jpg);
+}
+
+.secondRow .el2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 198px;
+	width: 291px;
+	font-weight: 300;
+	font-size: 16px;
+	color: white;
+}
+
+.secondRow .el2 div {
+	display: flex;
+	align-items: center;
+}
+
+.secondRow .el2 div div {
+	font-weight: 700;
+}
+
+.secondRow .el1 .main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 89px;
+	width: 100%;
+	font-weight: 200;
+	font-size: 36px;
+	color: white;
+	background-color: rgba(46, 32, 38, 0.8)
+}
+
+.secondRow .el1 .position {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 109px;
+	font-weight: 300;
+	font-size: 22px;
+	color: white;
+	background-color: rgba(120, 31, 36, 0.8);
+	border-radius: 0 0 0 5px;
+}
+	
+.secondRow .el1 .position .city {
+	display: flex;
+	flex-wrap: wrap;
+}	
+
+.nextDay {
+	margin-top: 30px;
+	font-family: Open Sans Condensed;
+	display: flex;
+	justify-content: center;
+}	
+
+.nextDay button {
+	font-size: 16px;
+}
+
+.credits {
+	bottom: 0px;
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	width: 90%;	
+}
+
+.border {
+	border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.containerFooter {
+	display: flex;
+	justify-content: center;
+	/*align-items: center;*/
+}
+
+.coder {
+	margin: 6px 0px 6px 0px;
+	padding: 2px 6px 2px 6px;
+	background-color: rgba(255, 255, 255, 0.85);
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.coder p {
+	margin: 0;
+	font-weight: bold;
+	color: orange;
+}
+
+.coder p img {
+	margin-bottom: 1px;
+}
+
+.powered {
+	display: none;
+	font-size: 11px;
+}
+
+@media (max-width:410px) {
+	.typeDataContainer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	
+	.navIcon {
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	
+	.input-form {
+		height: 42px;
+	}
+}
+
+@media (max-width:509px) {
+	.headerContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 80px;
+	}
+	
+	.appInfo {
+		width: 100%;
+	}
+	
+	.socialButtons {
+		justify-content: flex-start;
+		height: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	.containerDatas {
+		margin-top: 20px;
+	}
+	
+	.modal .modal-content .modal-body .days {
+		width: 50%;
+		margin: 0 auto;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	.days div .dayDate {
+		font-weight: 300;
+		font-size: 18px;
+		border-top: 1px solid rgba(131, 45, 52, 1.0);	
+	}
+	
+	.days div:first-child .dayDate {
+		border-top: none;
+	}
+	
+	.widgetContainer {
+		flex-direction: column-reverse;
+		width: 291px;
+		
+	}
+	
+	.secondRow .el1 {
+		flex-direction: column-reverse;
+		background: none;
+		
+	}
+	
+	.firstRow {
+		justify-content: flex-start;
+	}
+	
+	.secondRow {
+		justify-content: flex-start;
+	}
+	
+	.firstRow .el1 {
+		display: none;
+	}
+	
+	.secondRow .el2 {
+		display: none;
+	}
+	
+	.secondRow .el1 .position {
+		border-radius: 5px 5px 0 0;
+		background-color: rgba(255, 117, 0, 0.7);
+	}
+	
+	.secondRow .el1 .main {
+		background-color: rgba(120, 31, 36, 0.65);
+	}
+	
+	.firstRow .el2 .temp {
+		border: none;
+	}
+	
+	.firstRow .el2 .other {
+		border: none;
+	}
+	
+	.firstRow .el2 .other .iconForMobile {
+		display: block;
+	}
+	
+	.firstRow .el2 .other .sunrise {
+		display: none;
+	}
+	
+	.firstRow .el2 .other .sunset {
+		display: none;
+	}
+}
+
+@media (min-width: 600px) {
+	.days div .dayIcon {
+		padding-top: 6px;
+		border-top: 1px solid rgba(131, 45, 52, 0.2);
+	}
+}
+
+@media (max-width: 770px) {
+	.apiInfo {
+	display: none;
+	}
+	
+	.powered {
+		display: block;
+	}
+}
+
+@media (max-width:991px) {
+	.headerContainer {
+	padding: 0 5px 0 5px;
+	}
+}
+
+@media (max-height: 870px) {
+	.credits {
+		position: relative;
+		top: 10px;
+	}
+}
+
+/* Modal styles */
+.modal-title {
+	font-family: Open Sans Condensed;
+	font-weight: 700;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	color: rgba(255, 117, 0, 1.0);
+	font-variant: small-caps;
+}
+
+.modal-title .cityValue {
+	text-transform: uppercase;
+}
+
+.modal-title .country {
+	text-transform: lowercase;
+}
+
+.modal-body {
+	font-family: Open Sans Condensed;
+	font-weight: 300;
+	font-size: 16px;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+}
+
+.modal-body p:last-child {
+	font-variant: small-caps;
+	font-size: 17px;
+}
+
+.modal button {
+	font-variant: small-caps;
+}
+
+.modal .modal-content .modal-body .days {
+	display: flex;
+	font-family: Dosis;
+	justify-content: space-around;
+}
+
+.days div .dayDate {
+	font-weight: 300;
+	font-size: 24px;
+	padding-bottom: 5px;
+}
+
+.days div .dayIcon {
+	color: rgba(255, 117, 0, .7);
+}
+
+.days div .dayDesc{
+	font-size: 22px;
+	font-weight: 200;
+	flex-wrap: wrap;
+}
+
+.days div .dayTemp {
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+	font-weight: 300px;
+	color: rgba(131, 45, 52, 1.0);
+}
+
+.modal-footer .modal-footerContainer {
+	display: flex;
+	justify-content: center;
+	font-family: Open Sans Condensed;
+	font-weight: 400;
+	font-size: 12px;
+	text-transform: uppercase;
+}

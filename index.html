@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Weather forecast application">
+<meta name="keywords" content="Weather,app,application,forecast,geolocation,Rafal,Borek">
+<meta name="author" content="Rafał Borek">
+<title>Weather Application</title>
+<link rel="icon" type="image/png" href="images/favicon.png"/>
+<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Dosis:200,300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="css/owfont-regular.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="headerContainer">
+		<div class="appInfo">
+				<p><i class="fa fa-sun-o fa-spin" aria-hidden="true"></i>&nbsp;Weather&nbsp;application&nbsp;&nbsp;<i class="fa fa-bolt" aria-hidden="true"></i></p>
+		</div>
+		<div class="rightSide">
+			<div class="apiInfo">
+				<p>Script&nbsp;works&nbsp;with&nbsp;API&nbsp;&nbsp;</p><img src="images/logo_OWM.png" alt="Open Weather Map">
+			</div>
+			<div class="socialButtons">
+				  <button class="btn btn-info" data-toggle="modal" data-target="#aboutMeModal">About me</button>&nbsp;&nbsp;
+				<a href="#"><i class="fa fa-facebook-square fa-2x fa-primary" aria-hidden="true"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="infoData">
+		<div>Search location by city name or use navigation icon to display the weather for your current location.</div>	
+	</div>
+	<div class="typeData">
+		<div class="typeDataContainer">	
+			<div class="input-form">
+				<i class="fa fa-search prefix runSearching"></i>			
+				<input type="text" id="form" class="inp">
+				<label for="form" class="lbl">Your city name</label>
+			</div>
+			<div class="input-form">
+				<!--<i class="fa fa-flag prefix"></i>-->			
+				<input type="text" id="form2" class="inp2">
+				<label for="form2" class="lbl">Country&nbsp;(optional)</label>
+			</div>
+			<div class="navIcon">
+				<i class="fa fa-map-marker fa-2x" aria-hidden="true"></i>
+			</div>
+		</div>
+	</div>
+	<div class="containerDatas">
+		<div class="widgetContainer">
+			<div class="firstRow">
+				<div class="el1">-</div>
+				<div class="el2">
+					<div class="temp">
+						<div class="currentTemp"><div class="currentTempValue">-</div>&nbsp;°C</div>
+						<div class="otherTemp">
+							<div class="min">Min:&nbsp;&nbsp;<div class="minValue">-</div>&nbsp;°C</div>
+							<div class="max">Max:&nbsp;&nbsp;<div class="maxValue">-</div>&nbsp;°C</div>
+						</div>
+					</div>
+					<div class="other">
+						<div class="sunrise">Sunrise&nbsp;at&nbsp;&nbsp;<div class="sunriseValue">-</div>&nbsp;<i class="fa fa-sun-o" aria-hidden="true"></i></div>
+						<div class="sunset">Sunset&nbsp;at&nbsp;&nbsp;<div class="sunsetValue">-</div>&nbsp;<i class="fa fa-moon-o" aria-hidden="true"></i></div>
+						<div class="iconForMobile">lol</div>
+					</div>
+				</div>
+			</div>
+			<div class="secondRow">
+				<div class="el1">
+					<div class="main">-</div>
+					<div class="position">
+						<div class="city"><div class="cityValue">-</div>,&nbsp;&nbsp;<div class="country">-</div></div>
+						<div class="date">-, -</div>
+					</div>
+				</div>
+				<div class="el2">
+					<div class="pressure">Pressure:&nbsp;&nbsp;<div class="pressureValue">-</div>&nbsp;hpa&nbsp;&nbsp;<i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+					<div class="cloud">Cloudiness:&nbsp;&nbsp;<div class="cloudValue">-</div>&nbsp;%&nbsp;&nbsp;<div class="cloudNameValue">sky&nbsp;is&nbsp;clear</div>&nbsp;&nbsp;<i class="fa fa-cloud" aria-hidden="true"></i></div>
+					<div class="humidity">Humidity:&nbsp;&nbsp;<div class="humidityValue">-</div>&nbsp;%&nbsp;&nbsp;<i class="fa fa-tint" aria-hidden="true"></i></div>
+					<div class="wind">Wind&nbsp;speed:&nbsp;<div class="windName">-</div>&nbsp;&nbsp;<div class="windSpeed">-</div>&nbsp;m/s&nbsp;&nbsp;<i class="fa fa-leaf" aria-hidden="true"></i></div>
+					<div class="windDirection">Wind&nbsp;direction:&nbsp;<div class="windDirectionValue">-</div>&nbsp;&nbsp;<i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nextDay">
+		<button class="btn btn-info" data-toggle="modal" data-target="#weatherForecastModal">
+			Weather forecast for this location&nbsp;&nbsp;<i class="fa fa-calendar-o" aria-hidden="true"></i>
+		</button>
+	</div>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="aboutMeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Zamknij</span></button>
+					<h4 class="modal-title" id="myModalLabel">About ME</h4>
+				</div>
+				<div class="modal-body">
+				<p>This project is one of the Intermediate&nbsp;Front-End&nbsp;Development&nbsp;Project tasks in the Free&nbsp;Code&nbsp;Camp&nbsp;Course.</p>
+				<p>More informations about me are available on my website or on LinkeIn profile. If you would like to see my another project, check my website or GitHub repository.</p>
+				<p>Just CLICK on the buttons below.</p>
+			  </div>
+			  <div class="modal-footer">
+				<div class="text-center">
+					<a href="#"><button type="button" class="btn btn-danger">Website</button></a>
+					<a href="#"><button type="button" class="btn btn-primary">Linkedin</button></a>
+					<a href="#"><button type="button" class="btn button">Github</button></a>
+				</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+    <!--End of Modal -->
+	
+	<!-- Modal 2 -->
+	<div class="modal fade" id="weatherForecastModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Zamknij</span></button>
+					<h4 class="modal-title" id="myModalLabel">weather&nbsp;forecast&nbsp;for&nbsp;<div class="cityValue"></div>,&nbsp;<div class="country"></div></h4>
+				</div>
+				<div class="modal-body">
+					<div class="days">
+						<div class="day1">
+							<div class="dayDate">-</div>
+							<div class="dayIcon">-</div>
+							<div class="dayDesc">-</div>
+							<div class="dayTemp"><div class="dayTempValue">-</div>&nbsp;°C</div>
+						</div>
+						<div class="day2">
+							<div class="dayDate">-</div>
+							<div class="dayIcon">-</div>
+							<div class="dayDesc">-</div>
+							<div class="dayTemp"><div class="dayTempValue">-</div>&nbsp;°C</div>
+						</div>
+						<div class="day3">
+							<div class="dayDate">-</div>
+							<div class="dayIcon">-</div>
+							<div class="dayDesc">-</div>
+							<div class="dayTemp"><div class="dayTempValue">-</div>&nbsp;°C</div>
+						</div>
+						<div class="day4">
+							<div class="dayDate">-</div>
+							<div class="dayIcon">-</div>
+							<div class="dayDesc">-</div>
+							<div class="dayTemp"><div class="dayTempValue">-</div>&nbsp;°C</div>
+						</div>
+						<div class="day5">
+							<div class="dayDate">-</div>
+							<div class="dayIcon">-</div>
+							<div class="dayDesc">-</div>
+							<div class="dayTemp"><div class="dayTempValue">-</div>&nbsp;°C</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="modal-footerContainer">
+						Data are the average value of weather forecast between hours: 12:00-15:00 at UTC.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!--End of Modal 2-->
+	
+	<div class="credits">
+		<div class="border"></div>
+		<div class="containerFooter">
+			<div class="coder">
+				<p>&copy;&nbsp;&nbsp;2016&nbsp;&nbsp;&nbsp;&nbsp;Code&nbsp;by&nbsp;&nbsp;Rafał&nbsp;Borek</p>
+				<p class="powered">POWERED&nbsp;BY&nbsp;&nbsp;<img src="images/logo_OWM_small.png" alt="Open Weather Map"></p>
+			</div>
+		</div>
+	</div>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="sctipts.js"></script>
+</body>
+</html>
