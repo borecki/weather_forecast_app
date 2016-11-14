@@ -11,7 +11,7 @@ This app displays current weather and weather forecast for selected location. Yo
 * owfont
 
 ## Demo
-<a href="https://borecki.github.io/weather_forecast_app/">live priview available here</a>
+<a href="http://test17082.futurehost.pl/weather-forecast-app/">live priview available here</a>
 
 ## ScreenShots
 ![ScreenShot](http://i.imgur.com/vlFDAVu.jpg)
